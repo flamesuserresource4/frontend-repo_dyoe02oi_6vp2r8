@@ -1,28 +1,27 @@
-import { useState } from 'react'
+import React from 'react';
+import Hero from './components/Hero';
+import Identity from './components/Identity';
+import VisualIdentity from './components/VisualIdentity';
+import Messaging from './components/Messaging';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
+    <div className="min-h-screen w-full bg-black text-white">
+      <Hero />
+      <Identity />
+      <VisualIdentity />
+      <Messaging />
+
+      <footer className="border-t border-white/10 bg-[#0b0f12] py-10 text-white/70">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 md:flex-row">
+          <div className="text-sm">© {new Date().getFullYear()} AyoobAI — All rights reserved.</div>
+          <div className="text-xs">
+            Built with a calm, elegant system of precision and clarity.
+          </div>
         </div>
-      </div>
+      </footer>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
